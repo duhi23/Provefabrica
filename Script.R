@@ -15,6 +15,10 @@ rownames(data) <- unlist(data %>% select(contains("CODIGO")))
 # as.character(data %>% select(contains("CODIGO")))
 data <- data %>% select(-contains("NOMBRE"), -contains("CODIGO"))
 
+setwd("/Users/Diego/Dropbox/Source Stat Lab/Provefabrica")
+list.files()
+
+
 serie <- function(i){
       plot(ts(unlist(data[i,]), start=c(2013, 6), end=c(2015, 6), freq = 12))
 }
