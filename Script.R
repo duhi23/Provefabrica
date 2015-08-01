@@ -7,7 +7,8 @@ library(dplyr)
 ls("package:readxl")
 ls("package:dplyr")
 
-setwd("/Users/Diego/Dropbox/Proyectos/Provefabrica")
+dir.data <- "/Users/Diego/Dropbox/Proyectos/Provefabrica"
+setwd(dir.data)
 list.files()
 
 data <- tbl_df(read_excel("BASE DE DATOS CONSUMO Y SALDOS.xlsx", sheet=2))
@@ -15,7 +16,8 @@ rownames(data) <- unlist(data %>% select(contains("CODIGO")))
 # as.character(data %>% select(contains("CODIGO")))
 data <- data %>% select(-contains("NOMBRE"), -contains("CODIGO"))
 
-setwd("/Users/Diego/Dropbox/Source Stat Lab/Provefabrica")
+dir.main <- "/Users/Diego/Dropbox/Source Stat Lab/Provefabrica"
+setwd(dir.main)
 list.files()
 
 
