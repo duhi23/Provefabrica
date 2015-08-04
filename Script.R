@@ -20,11 +20,12 @@ dir.main <- "/Users/Diego/Dropbox/Source Stat Lab/Provefabrica"
 setwd(dir.main)
 list.files()
 
-
 serie <- function(i){
       plot(ts(unlist(data[i,]), start=c(2013, 6), end=c(2015, 6), freq = 12))
 }
 
+
+serie(1)
 
 
 
